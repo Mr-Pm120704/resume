@@ -1,0 +1,8 @@
+{
+  "name": "brightdata_full",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ]
+}

@@ -1,0 +1,1 @@
+import React from 'react'; export default function Admin(){ return (<div className='max-w-6xl mx-auto px-6 py-12'><h2 className='text-2xl font-bold mb-4'>Admin</h2><p className='text-slate-300'>Admin dashboard (requires admin JWT).</p></div>); }

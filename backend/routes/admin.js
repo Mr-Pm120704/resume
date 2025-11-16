@@ -1,0 +1,4 @@
+const express=require('express'); const router=express.Router(); const auth=require('../middleware/auth'); const Lead=require('../models/Lead'); const Subscriber=require('../models/Subscriber'); const User=require('../models/User');
+router.get('/stats', auth(['admin']), async (req,res)=>{ try{ const leads=await Lead.find().sort({createdAt:-1}).limit(200); const subs=await Subscriber.find().sort({createdAt:-1}).limit(200); res.json({leads,subs}); }catch(e){console.error(e);res.status(500).json({error:'server'})} });
+router.post('/seed-admin', async (req,res)=>{ const ex=await User.findOne({role:'admin'}); if(ex) return res.json({ok:true,msg:'admin exists'}); const bcrypt=require('bcryptjs'); const hash=await bcrypt.hash('admin123',10); const u=new User({name:'Admin',email:'admin@local',passwordHash:hash,role:'admin'}); await u.save(); res.json({ok:true,created:true}); });
+module.exports=router;

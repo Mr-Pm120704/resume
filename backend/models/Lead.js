@@ -1,0 +1,1 @@
+const mongoose=require('mongoose'); const LeadSchema=new mongoose.Schema({firstName:String,lastName:String,email:{type:String,required:true},country:String,phone:String,budget:String,message:String,createdAt:{type:Date,default:Date.now}}); module.exports=mongoose.model('Lead',LeadSchema);
