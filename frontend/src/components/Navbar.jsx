@@ -57,6 +57,32 @@ export default function Navbar(){
           </div>
           <button className="px-4 py-2 rounded-full bg-transparent border border-white/10 text-white">Start to Chat</button>
         </div>
+
+
+
+      
+
+
+
+        <div className="flex items-center gap-4">
+          <button className="hidden md:inline px-4 py-2 border rounded-full border-white/10 text-sm">Languages</button>
+          <div className='relative'>
+            <button className="hidden md:inline px-4 py-2 border rounded-full text-sm border-white/10">Contect Me</button>
+            <div className={ContectOpen ? "visible" : "hidden"}><Contact/></div>
+          </div>
+          <button className="px-4 py-2 rounded-full bg-transparent border border-white/10 text-white">Start to Chat</button>
+        </div>
+        <div className="flex items-center gap-4">
+          <button className="hidden md:inline px-4 py-2 border rounded-full border-white/10 text-sm">Languages</button>
+          <div className='relative'>
+            <button className="hidden md:inline px-4 py-2 border rounded-full text-sm border-white/10">Contect Me</button>
+            <div className={ContectOpen ? "visible" : "hidden"}><Contact/></div>
+          </div>
+          <button className="px-4 py-2 rounded-full bg-transparent border border-white/10 text-white">Start to Chat</button>
+        </div>
+
+
+
       </div>
     </header>
   )
